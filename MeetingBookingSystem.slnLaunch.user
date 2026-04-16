@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "BookingRoom.Server\\BookingRoom.Server.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "BookingRoom.Client.WPF\\BookingRoom.Client.WPF.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

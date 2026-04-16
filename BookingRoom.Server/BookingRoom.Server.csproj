@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Mapster" Version="10.0.7" />
+		<PackageReference Include="Mapster.DependencyInjection" Version="10.0.7" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.14">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.5" />
+		<PackageReference Include="RabbitMQ.Client" Version="7.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\BookingRoom.Application\BookingRoom.Application.csproj" />
+    <ProjectReference Include="..\BookingRoom.Persistence.InMemory\BookingRoom.Persistence.InMemory.csproj" />
+    <ProjectReference Include="..\BookingRoom.Persistence.PostgreSQL\BookingRoom.Persistence.PostgreSQL.csproj" />
+    <ProjectReference Include="..\Room.Domain\BookingRoom.Domain.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+
+</Project>
